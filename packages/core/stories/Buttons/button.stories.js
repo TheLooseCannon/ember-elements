@@ -17,7 +17,6 @@ export default {
       },
     },
     active: {
-      control: 'text',
       table: {
         type: {
           summary: 'boolean',
@@ -26,10 +25,11 @@ export default {
           summary: false
         }
       },
-      description: 'If set to true, The button will display in an active state. This is equivalent to setting className=\'bp3- active\'.', control: 'boolean', table: { defaultValue: { summary: false } }
+      description: 'If set to <b>true</b>, The button will display in an active state. This is equivalent to setting <b>className=\'bp3-active\'</b>.',
+      control: 'boolean',
     },
     alignText: {
-      description: 'Text alignment within button. By default, icons and text will be centered within the button. Passing "left" or "right" will align the button text to that side and push icon and rightIcon to either edge. Passing "center" will center the text and icons together.',
+      description: 'Text alignment within button. By default, icons and text will be centered within the button. Passing <b>"left"</b> or <b>"right"</b> will align the button text to that side and push <b>icon</b> and <b>rightIcon</b> to either edge. Passing <b>"center"</b> will center the text and icons together.',
       table: {
         type: {
           summary: 'enum',
@@ -83,7 +83,7 @@ export default {
       control: 'boolean'
     },
     intent: {
-      description: 'Visual intent color to apply to element. Options are primary,success,warning,danger,none.',
+      description: 'Visual intent color to apply to element. Options are <b>primary,success,warning,danger,none</b>.',
       table: {
         type: {
           summary: 'string',
@@ -112,12 +112,11 @@ export default {
       control: 'boolean'
     },
     icon: {
-      description: 'Name of a Blueprint UI icon to render before the text.',
+      description: 'Name of a Blueprint UI icon to render before the text.<br><a href="https://dunkinbase.github.io/ember-elements/docs/icon/icons" >IconName</a>',
       control: 'text',
       table: {
         type: {
           summary: 'string',
-          detail: '<a href="https://dunkinbase.github.io/ember-elements/docs/icon/icons" >IconName</a>',
         },
         defaultValue: { summary: 'none' }
       },
@@ -157,12 +156,11 @@ export default {
       }
     },
     rightIcon: {
-      description: 'Name of a Blueprint UI icon to render after the text.',
+      description: 'Name of a Blueprint UI icon to render after the text.<br><a href="https://dunkinbase.github.io/ember-elements/docs/icon/icons" >IconName</a>',
       control: 'text',
       table: {
         type: {
           summary: 'string',
-          detail: '<a href="https://dunkinbase.github.io/ember-elements/docs/icon/icons" >IconName</a>',
         },
         defaultValue: { summary: 'none' }
       },

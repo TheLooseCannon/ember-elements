@@ -16,18 +16,17 @@ export default {
       control: 'text',
     },
     icon: {
-      description: 'Name of a UI icon name to render on the left side.\n\nIf this prop is omitted or undefined, the intent prop will determine a default icon. If this prop is explicitly null, no icon will be displayed (regardless of intent).',
+      description: 'Name of a UI icon name to render on the left side.<br><br>If this prop is omitted or <b>undefined</b>, the <b>intent</b> prop will determine a default icon. If this prop is explicitly <b>null</b>, no icon will be displayed (regardless of <b>intent</b>).<br><a href="https://dunkinbase.github.io/ember-elements/docs/icon/icons" >IconName</a>',
       control: 'text',
       table: {
         type: {
-          summary: 'string',
-          detail: '<a href="https://dunkinbase.github.io/ember-elements/docs/icon/icons" >IconName</a>',
+          summary: 'string'
         },
         defaultValue: { summary: 'none' }
       },
     },
     intent: {
-      description: 'Visual intent color to apply to background, title, and icon.\n\nDefining this prop also applies a default icon, if the icon prop is omitted.',
+      description: 'Visual intent color to apply to background, title, and icon.<br><br>Defining this prop also applies a default icon, if the icon prop is omitted.',
       table: {
         type: {
           summary: 'string',
@@ -47,7 +46,7 @@ export default {
     },
     title: {
       control: 'text',
-      description: 'String content of optional title element.\n\nDue to a conflict with the HTML prop types, to provide html element content simply pass <h4>title content</h4> as first children element instead of using this prop.',
+      description: 'String content of optional title element.<br><br>Due to a conflict with the HTML prop types, to provide html element content simply pass <b>&lt;h4&gt;title content&lt;/h4&gt;</b> as first children element instead of using this prop.',
       table: {
         type: {
           summary: 'string',

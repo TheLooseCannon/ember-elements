@@ -5,7 +5,7 @@ export default {
   title: 'Core/Components/Button Group',
   argTypes: {
     alignText: {
-      description: 'Text alignment within button. By default, icons and text will be centered within the button. Passing "left" or "right" will align the button text to that side and push icon and rightIcon to either edge. Passing "center" will center the text and icons together.',
+      description: 'Text alignment within button. By default, icons and text will be centered within the button. Passing <b>"left"</b> or <b>"right"</b> will align the button text to that side and push <b>icon</b> and <b>rightIcon</b> to either edge. Passing <b>"center"</b> will center the text and icons together.',
       table: {
         type: {
           summary: 'enum',
