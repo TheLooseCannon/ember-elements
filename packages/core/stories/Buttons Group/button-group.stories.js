@@ -1,5 +1,5 @@
 import { hbs } from 'ember-cli-htmlbars';
-import { linkTo } from '@storybook/addon-links';
+// import { linkTo } from '@storybook/addon-links';
 
 export default {
   title: 'Core/Components/Button Group',

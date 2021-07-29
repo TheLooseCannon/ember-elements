@@ -1,5 +1,5 @@
 import { hbs } from 'ember-cli-htmlbars';
-import { linkTo } from '@storybook/addon-links';
+// import { linkTo } from '@storybook/addon-links';
 
 export default {
   title: 'Core/Components/Button',
@@ -86,18 +86,18 @@ export default {
       description: 'Visual intent color to apply to element. Options are primary,success,warning,danger,none.',
       table: {
         type: {
-          summary: 'boolean',
+          summary: 'string',
         },
-        defaultValue: { summary: false }
+        defaultValue: { summary: 'none' }
       },
       control: {
         type: 'select',
         options: {
-          Primary: 'primary',
-          Success: 'success',
-          Warning: 'warning',
-          Danger: 'danger',
-          None: 'none',
+          primary: 'primary',
+          success: 'success',
+          warning: 'warning',
+          danger: 'danger',
+          none: 'none',
         }
       }
     },
@@ -180,7 +180,7 @@ export default {
       }
     },
     type: {
-      control: 'string',
+      control: 'text',
       description: 'The type property specifies the type of button.',
       table: {
         type: {
