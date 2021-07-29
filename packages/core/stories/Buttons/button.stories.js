@@ -1,9 +1,8 @@
 import { hbs } from 'ember-cli-htmlbars';
-import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
 
 export default {
-  title: 'Button',
+  title: 'Core/Components/Button',
   argTypes: {
     label: {
       description: 'Text to be shown inside the button',
@@ -415,15 +414,15 @@ SmallButton.args = {
 //     onClick: () => action('This was clicked')(),
 //   },
 // });
-export const ButtonWithLinkToAnotherStory = () => ({
-  template: hbs`
-    <button {{action onClick}}>
-      Go to Welcome Story
-    </button>
-  `,
-  context: {
-    onClick: linkTo('example-introduction--page'),
-  },
-});
+// export const ButtonWithLinkToAnotherStory = () => ({
+//   template: hbs`
+//     <button {{action onClick}}>
+//       Go to Welcome Story
+//     </button>
+//   `,
+//   context: {
+//     onClick: linkTo('example-introduction--page'),
+//   },
+// });
 
-ButtonWithLinkToAnotherStory.storyName = 'button with link to another story';
+// ButtonWithLinkToAnotherStory.storyName = 'button with link to another story';
