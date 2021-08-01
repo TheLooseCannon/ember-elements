@@ -12,8 +12,8 @@ export default {
           summary: 'string',
         },
         defaultValue: {
-          summary: 'none'
-        }
+          summary: 'none',
+        },
       },
     },
     active: {
@@ -22,22 +22,24 @@ export default {
           summary: 'boolean',
         },
         defaultValue: {
-          summary: false
-        }
+          summary: false,
+        },
       },
-      description: 'If set to <b>true</b>, The button will display in an active state. This is equivalent to setting <b>className=\'bp3-active\'</b>.',
+      description:
+        "If set to <b>true</b>, The button will display in an active state. This is equivalent to setting <b>className='bp3-active'</b>.",
       control: 'boolean',
     },
     alignText: {
-      description: 'Text alignment within button. By default, icons and text will be centered within the button. Passing <b>"left"</b> or <b>"right"</b> will align the button text to that side and push <b>icon</b> and <b>rightIcon</b> to either edge. Passing <b>"center"</b> will center the text and icons together.',
+      description:
+        'Text alignment within button. By default, icons and text will be centered within the button. Passing <b>"left"</b> or <b>"right"</b> will align the button text to that side and push <b>icon</b> and <b>rightIcon</b> to either edge. Passing <b>"center"</b> will center the text and icons together.',
       table: {
         type: {
           summary: 'enum',
-          detail: 'possible values: left, right, center'
+          detail: 'possible values: left, right, center',
         },
         defaultValue: {
-          summary: false
-        }
+          summary: false,
+        },
       },
       control: {
         type: 'select',
@@ -45,8 +47,8 @@ export default {
           Left: 'left',
           Right: 'right',
           Center: 'center',
-        }
-      }
+        },
+      },
     },
     class: {
       description: 'A space-delimited list of class names to pass along to a child element.',
@@ -55,8 +57,8 @@ export default {
           summary: 'string',
         },
         defaultValue: {
-          summary: 'none'
-        }
+          summary: 'none',
+        },
       },
       control: 'text',
     },
@@ -67,8 +69,8 @@ export default {
           summary: 'string',
         },
         defaultValue: {
-          summary: 'none'
-        }
+          summary: 'none',
+        },
       },
       control: 'text',
     },
@@ -78,9 +80,9 @@ export default {
         type: {
           summary: 'boolean',
         },
-        defaultValue: { summary: false }
+        defaultValue: { summary: false },
       },
-      control: 'boolean'
+      control: 'boolean',
     },
     intent: {
       description: 'Visual intent color to apply to element. Options are <b>primary,success,warning,danger,none</b>.',
@@ -88,7 +90,7 @@ export default {
         type: {
           summary: 'string',
         },
-        defaultValue: { summary: 'none' }
+        defaultValue: { summary: 'none' },
       },
       control: {
         type: 'select',
@@ -98,8 +100,8 @@ export default {
           warning: 'warning',
           danger: 'danger',
           none: 'none',
-        }
-      }
+        },
+      },
     },
     fill: {
       description: 'Whether this button should expand to fill its container.',
@@ -107,18 +109,19 @@ export default {
         type: {
           summary: 'boolean',
         },
-        defaultValue: { summary: false }
+        defaultValue: { summary: false },
       },
-      control: 'boolean'
+      control: 'boolean',
     },
     icon: {
-      description: 'Name of a Blueprint UI icon to render before the text.<br><a href="https://dunkinbase.github.io/ember-elements/docs/icon/icons" >IconName</a>',
+      description:
+        'Name of a Blueprint UI icon to render before the text.<br><a href="https://dunkinbase.github.io/ember-elements/docs/icon/icons" >IconName</a>',
       control: 'text',
       table: {
         type: {
           summary: 'string',
         },
-        defaultValue: { summary: 'none' }
+        defaultValue: { summary: 'none' },
       },
     },
     iconSize: {
@@ -126,9 +129,9 @@ export default {
       control: 'number',
       table: {
         type: {
-          summary: 'number'
+          summary: 'number',
         },
-        defaultValue: { summary: 16 }
+        defaultValue: { summary: 16 },
       },
     },
     large: {
@@ -139,8 +142,8 @@ export default {
           summary: 'boolean',
         },
         defaultValue: {
-          summary: false
-        }
+          summary: false,
+        },
       },
     },
     minimal: {
@@ -151,18 +154,19 @@ export default {
           summary: 'boolean',
         },
         defaultValue: {
-          summary: false
-        }
-      }
+          summary: false,
+        },
+      },
     },
     rightIcon: {
-      description: 'Name of a Blueprint UI icon to render after the text.<br><a href="https://dunkinbase.github.io/ember-elements/docs/icon/icons" >IconName</a>',
+      description:
+        'Name of a Blueprint UI icon to render after the text.<br><a href="https://dunkinbase.github.io/ember-elements/docs/icon/icons" >IconName</a>',
       control: 'text',
       table: {
         type: {
           summary: 'string',
         },
-        defaultValue: { summary: 'none' }
+        defaultValue: { summary: 'none' },
       },
     },
     small: {
@@ -171,11 +175,11 @@ export default {
       table: {
         type: {
           summary: 'boolean',
-        }
+        },
       },
       defaultValue: {
-        summary: false
-      }
+        summary: false,
+      },
     },
     type: {
       control: 'text',
@@ -183,11 +187,11 @@ export default {
       table: {
         type: {
           summary: 'string',
-        }
+        },
       },
       defaultValue: {
-        summary: 'none'
-      }
+        summary: 'none',
+      },
     },
   },
 };
@@ -233,7 +237,7 @@ Primary.args = {
   rightIcon: 'share',
   small: false,
   text: '',
-  type: ''
+  type: '',
 };
 
 export const Success = Template.bind({});
@@ -253,7 +257,7 @@ Success.args = {
   rightIcon: '',
   small: false,
   text: '',
-  type: ''
+  type: '',
 };
 
 export const Warning = Template.bind({});
@@ -273,7 +277,7 @@ Warning.args = {
   rightIcon: '',
   small: false,
   text: '',
-  type: ''
+  type: '',
 };
 
 export const Danger = Template.bind({});
@@ -293,7 +297,7 @@ Danger.args = {
   rightIcon: '',
   small: false,
   text: '',
-  type: ''
+  type: '',
 };
 
 export const ActiveButton = Template.bind({});
@@ -314,7 +318,7 @@ ActiveButton.args = {
   rightIcon: '',
   small: false,
   text: '',
-  type: ''
+  type: '',
 };
 
 export const DisabledButton = Template.bind({});
@@ -335,7 +339,7 @@ DisabledButton.args = {
   rightIcon: '',
   small: false,
   text: '',
-  type: ''
+  type: '',
 };
 
 export const LargeButton = Template.bind({});
@@ -356,7 +360,7 @@ LargeButton.args = {
   rightIcon: '',
   small: false,
   text: '',
-  type: ''
+  type: '',
 };
 
 export const MinimalButton = Template.bind({});
@@ -377,7 +381,7 @@ MinimalButton.args = {
   rightIcon: '',
   small: false,
   text: '',
-  type: ''
+  type: '',
 };
 
 export const SmallButton = Template.bind({});
@@ -398,7 +402,7 @@ SmallButton.args = {
   rightIcon: '',
   small: true,
   text: '',
-  type: ''
+  type: '',
 };
 // TextWithAction.parameters = { notes: 'My notes on a button with emojis' };
 

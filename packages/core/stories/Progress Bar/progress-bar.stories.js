@@ -1,0 +1,93 @@
+import { hbs } from 'ember-cli-htmlbars';
+import { action } from '@ember/object';
+// import { linkTo } from '@storybook/addon-links';
+
+export default {
+  title: 'Core/Components/Progress Bar',
+  argTypes: {
+    animate: {
+      description: 'Whether the background should animate.',
+      table: {
+        type: {
+          summary: 'boolean',
+        },
+        defaultValue: {
+          summary: true,
+        },
+      },
+      control: 'boolean',
+    },
+    class: {
+      description: 'A space-delimited list of class names to pass along to a child element.',
+      table: {
+        type: {
+          summary: 'string',
+        },
+        defaultValue: {
+          summary: 'none',
+        },
+      },
+      control: 'text',
+    },
+    intent: {
+      description: 'Visual intent color to apply to element. Options are <b>primary,success,warning,danger,none</b>.',
+      table: {
+        type: {
+          summary: 'string',
+        },
+        defaultValue: { summary: 'none' },
+      },
+      control: {
+        type: 'select',
+        options: {
+          primary: 'primary',
+          success: 'success',
+          warning: 'warning',
+          danger: 'danger',
+          none: 'none',
+        },
+      },
+    },
+    stripes: {
+      table: {
+        type: {
+          summary: 'boolean',
+        },
+        defaultValue: {
+          summary: false,
+        },
+      },
+      description: 'Whether this navbar should be fixed to the top of the viewport (using CSS <b>position: fixed</b>).',
+      control: 'boolean',
+    },
+    value: {
+      description:
+        'A value between 0 and 1 (inclusive) representing how far along the operation is. Values below 0 or above 1 will be interpreted as 0 or 1, respectively. Omitting this prop will result in an "indeterminate" progress meter that fills the entire bar.',
+      table: {
+        type: {
+          summary: 'string',
+        },
+        defaultValue: {
+          summary: 'none',
+        },
+      },
+      control: { type: 'range', min: 0, max: 1, step: 10 },
+    },
+  },
+};
+
+const Template = (args) => ({
+  template: hbs`<ProgressBar
+      @intent={{this.intent}}
+      @value={{this.value}}
+      @animate={{this.animate}}
+  />`,
+  context: args,
+});
+
+export const ProgressBar = Template.bind({});
+ProgressBar.args = {
+  intent: 'primary',
+  animate: true,
+  value: 0.4,
+};

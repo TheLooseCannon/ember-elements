@@ -12,8 +12,8 @@ export default {
           summary: 'string',
         },
         defaultValue: {
-          summary: 'none'
-        }
+          summary: 'none',
+        },
       },
       control: 'text',
     },
@@ -23,29 +23,31 @@ export default {
         type: {
           summary: 'boolean',
         },
-        defaultValue: { summary: false }
+        defaultValue: { summary: false },
       },
-      control: 'boolean'
+      control: 'boolean',
     },
     keepChildrenMounted: {
-      description: 'Whether the child components will remain mounted when the <b>Collapse</b> is closed. Setting to true may improve performance by avoiding re-mounting children.',
+      description:
+        'Whether the child components will remain mounted when the <b>Collapse</b> is closed. Setting to true may improve performance by avoiding re-mounting children.',
       table: {
         type: {
           summary: 'boolean',
         },
-        defaultValue: { summary: false }
+        defaultValue: { summary: false },
       },
-      control: 'boolean'
+      control: 'boolean',
     },
     transitionDuration: {
-      description: 'The length of time the transition takes, in milliseconds. This must match the duration of the animation in CSS. Only set this prop if you override Blueprint\'s default transitions with new transitions of a different length.',
+      description:
+        "The length of time the transition takes, in milliseconds. This must match the duration of the animation in CSS. Only set this prop if you override Blueprint's default transitions with new transitions of a different length.",
       table: {
         type: {
           summary: 'number',
         },
         defaultValue: {
-          summary: 300
-        }
+          summary: 300,
+        },
       },
       control: { type: 'number', min: 0 },
     },

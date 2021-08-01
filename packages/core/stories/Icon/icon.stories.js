@@ -12,8 +12,8 @@ export default {
           summary: 'string',
         },
         defaultValue: {
-          summary: 'none'
-        }
+          summary: 'none',
+        },
       },
       control: 'text',
     },
@@ -24,8 +24,8 @@ export default {
           summary: 'string',
         },
         defaultValue: {
-          summary: 'none'
-        }
+          summary: 'none',
+        },
       },
       control: 'text',
     },
@@ -35,7 +35,7 @@ export default {
         type: {
           summary: 'string',
         },
-        defaultValue: { summary: 'none' }
+        defaultValue: { summary: 'none' },
       },
       control: {
         type: 'select',
@@ -45,17 +45,18 @@ export default {
           warning: 'warning',
           danger: 'danger',
           none: 'none',
-        }
-      }
+        },
+      },
     },
     icon: {
-      description: 'Name of a Blueprint UI icon to render before the text.<br><a href="https://dunkinbase.github.io/ember-elements/docs/icon/icons" >IconName</a>',
+      description:
+        'Name of a Blueprint UI icon to render before the text.<br><a href="https://dunkinbase.github.io/ember-elements/docs/icon/icons" >IconName</a>',
       control: 'text',
       table: {
         type: {
           summary: 'string',
         },
-        defaultValue: { summary: 'none' }
+        defaultValue: { summary: 'none' },
       },
     },
     iconSize: {
@@ -63,35 +64,37 @@ export default {
       control: 'number',
       table: {
         type: {
-          summary: 'number'
+          summary: 'number',
         },
-        defaultValue: { summary: 16 }
+        defaultValue: { summary: 16 },
       },
     },
     title: {
-      description: 'Description string. This string does not appear in normal browsers, but it increases accessibility. For instance, screen readers will use it for aural feedback. By default, this is set to the icon\'s name.',
+      description:
+        "Description string. This string does not appear in normal browsers, but it increases accessibility. For instance, screen readers will use it for aural feedback. By default, this is set to the icon's name.",
       control: 'text',
       table: {
         type: {
           summary: 'string',
         },
         defaultValue: {
-          summary: ''
-        }
-      }
+          summary: '',
+        },
+      },
     },
     color: {
-      description: 'Color of icon. This is used as the <b>fill</b> attribute on the <b>&lt;svg&gt;</b> image so it will override any CSS <b>color<b> property, including that set by <b>intent</b>. If this prop is omitted, icon color is inherited from surrounding text.',
+      description:
+        'Color of icon. This is used as the <b>fill</b> attribute on the <b>&lt;svg&gt;</b> image so it will override any CSS <b>color<b> property, including that set by <b>intent</b>. If this prop is omitted, icon color is inherited from surrounding text.',
       control: 'text',
       table: {
         type: {
           summary: 'string',
         },
         defaultValue: {
-          summary: ''
-        }
-      }
-    }
+          summary: '',
+        },
+      },
+    },
   },
 };
 
@@ -106,5 +109,5 @@ const Template = (args) => ({
 
 export const Asterisk = Template.bind({});
 Asterisk.args = {
-  icon: 'asterisk'
+  icon: 'asterisk',
 };

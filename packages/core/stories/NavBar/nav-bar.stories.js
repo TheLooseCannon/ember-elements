@@ -13,8 +13,8 @@ export default {
           summary: 'string',
         },
         defaultValue: {
-          summary: 'none'
-        }
+          summary: 'none',
+        },
       },
       control: 'text',
     },
@@ -25,8 +25,8 @@ export default {
           summary: 'boolean',
         },
         defaultValue: {
-          summary: false
-        }
+          summary: false,
+        },
       },
       description: 'Whether this navbar should be fixed to the top of the viewport (using CSS <b>position: fixed</b>).',
       control: 'boolean',
@@ -39,8 +39,8 @@ export default {
           summary: 'string',
         },
         defaultValue: {
-          summary: 'none'
-        }
+          summary: 'none',
+        },
       },
       control: 'text',
     },
@@ -51,10 +51,11 @@ export default {
           summary: 'string',
         },
         defaultValue: {
-          summary: 'left'
-        }
+          summary: 'left',
+        },
       },
-      description: 'The side of the navbar on which the group should appear. The <b>Alignment<b> enum provides constants for these values.("left","right","center")',
+      description:
+        'The side of the navbar on which the group should appear. The <b>Alignment<b> enum provides constants for these values.("left","right","center")',
       control: 'string',
     },
     class: {
@@ -65,8 +66,8 @@ export default {
           summary: 'string',
         },
         defaultValue: {
-          summary: 'none'
-        }
+          summary: 'none',
+        },
       },
       control: 'text',
     },
@@ -78,8 +79,8 @@ export default {
           summary: 'string',
         },
         defaultValue: {
-          summary: 'none'
-        }
+          summary: 'none',
+        },
       },
       control: 'text',
     },
@@ -91,8 +92,8 @@ export default {
           summary: 'string',
         },
         defaultValue: {
-          summary: 'none'
-        }
+          summary: 'none',
+        },
       },
       control: 'text',
     },
@@ -104,12 +105,12 @@ export default {
           summary: 'string',
         },
         defaultValue: {
-          summary: 'none'
-        }
+          summary: 'none',
+        },
       },
       control: 'text',
     },
-  }
+  },
 };
 
 const Template = (args) => ({
@@ -139,5 +140,5 @@ const Template = (args) => ({
 export const LeftAlignNavBar = Template.bind({});
 LeftAlignNavBar.args = {
   align: 'left',
-  fixedToTop: false
+  fixedToTop: false,
 };

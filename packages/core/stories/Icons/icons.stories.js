@@ -3,29 +3,27 @@ import { action } from '@ember/object';
 // import { linkTo } from '@storybook/addon-links';
 
 export default {
-	title: 'Icons/Miscellaneous',
+  title: 'Icons/Miscellaneous',
 };
 
 const Template = (args) => ({
-	template: hbs`<Icon
+  template: hbs`<Icon
       @icon={{this.icon}}
       @iconSize={{value}}
       @intent={{intent}}
       />`,
-	context: args,
+  context: args,
 });
 
 export const Asterisk = Template.bind({});
 Asterisk.args = {
-	icon: 'asterisk'
+  icon: 'asterisk',
 };
-
 
 export const Badge = Template.bind({});
 Badge.args = {
-	icon: 'badge'
+  icon: 'badge',
 };
-
 
 export const BankAccount = Template.bind({});
 BankAccount.args = { icon: 'bank-account' };
@@ -157,4 +155,3 @@ export const Tree = Template.bind({});
 Tree.args = { icon: 'tree' };
 export const Wrench = Template.bind({});
 Wrench.args = { icon: 'wrench' };
-

@@ -5,15 +5,16 @@ export default {
   title: 'Core/Components/Button Group',
   argTypes: {
     alignText: {
-      description: 'Text alignment within button. By default, icons and text will be centered within the button. Passing <b>"left"</b> or <b>"right"</b> will align the button text to that side and push <b>icon</b> and <b>rightIcon</b> to either edge. Passing <b>"center"</b> will center the text and icons together.',
+      description:
+        'Text alignment within button. By default, icons and text will be centered within the button. Passing <b>"left"</b> or <b>"right"</b> will align the button text to that side and push <b>icon</b> and <b>rightIcon</b> to either edge. Passing <b>"center"</b> will center the text and icons together.',
       table: {
         type: {
           summary: 'enum',
-          detail: 'possible values: left, right, center'
+          detail: 'possible values: left, right, center',
         },
         defaultValue: {
-          summary: false
-        }
+          summary: false,
+        },
       },
       control: {
         type: 'select',
@@ -21,8 +22,8 @@ export default {
           Left: 'left',
           Right: 'right',
           Center: 'center',
-        }
-      }
+        },
+      },
     },
     class: {
       description: 'A space-delimited list of class names to pass along to a child element.',
@@ -31,8 +32,8 @@ export default {
           summary: 'string',
         },
         defaultValue: {
-          summary: 'none'
-        }
+          summary: 'none',
+        },
       },
       control: 'text',
     },
@@ -43,8 +44,8 @@ export default {
           summary: 'string',
         },
         defaultValue: {
-          summary: 'none'
-        }
+          summary: 'none',
+        },
       },
       control: 'text',
     },
@@ -54,9 +55,9 @@ export default {
         type: {
           summary: 'boolean',
         },
-        defaultValue: { summary: false }
+        defaultValue: { summary: false },
       },
-      control: 'boolean'
+      control: 'boolean',
     },
     large: {
       control: 'boolean',
@@ -66,8 +67,8 @@ export default {
           summary: 'boolean',
         },
         defaultValue: {
-          summary: false
-        }
+          summary: false,
+        },
       },
     },
     minimal: {
@@ -78,9 +79,9 @@ export default {
           summary: 'boolean',
         },
         defaultValue: {
-          summary: false
-        }
-      }
+          summary: false,
+        },
+      },
     },
     vertical: {
       description: 'Whether the button group should appear with vertical styling.',
@@ -90,7 +91,7 @@ export default {
           summary: 'string',
           detail: '<a href="https://dunkinbase.github.io/ember-elements/docs/icon/icons" >IconName</a>',
         },
-        defaultValue: { summary: 'none' }
+        defaultValue: { summary: 'none' },
       },
     },
   },

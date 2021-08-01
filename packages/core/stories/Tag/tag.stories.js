@@ -11,8 +11,8 @@ export default {
           summary: 'boolean',
         },
         defaultValue: {
-          summary: false
-        }
+          summary: false,
+        },
       },
       description: 'Whether the tag should appear in an active state.',
       control: 'boolean',
@@ -24,18 +24,19 @@ export default {
         type: {
           summary: 'boolean',
         },
-        defaultValue: { summary: false }
+        defaultValue: { summary: false },
       },
-      control: 'boolean'
+      control: 'boolean',
     },
     icon: {
-      description: 'Name of a Blueprint UI icon to render before the text.<br><a href="https://dunkinbase.github.io/ember-elements/docs/icon/icons" >IconName</a>',
+      description:
+        'Name of a Blueprint UI icon to render before the text.<br><a href="https://dunkinbase.github.io/ember-elements/docs/icon/icons" >IconName</a>',
       control: 'text',
       table: {
         type: {
           summary: 'string',
         },
-        defaultValue: { summary: 'none' }
+        defaultValue: { summary: 'none' },
       },
     },
     iconSize: {
@@ -43,9 +44,9 @@ export default {
       control: 'number',
       table: {
         type: {
-          summary: 'number'
+          summary: 'number',
         },
-        defaultValue: { summary: 16 }
+        defaultValue: { summary: 16 },
       },
     },
     intent: {
@@ -54,7 +55,7 @@ export default {
         type: {
           summary: 'string',
         },
-        defaultValue: { summary: 'none' }
+        defaultValue: { summary: 'none' },
       },
       control: {
         type: 'select',
@@ -64,18 +65,19 @@ export default {
           warning: 'warning',
           danger: 'danger',
           none: 'none',
-        }
-      }
+        },
+      },
     },
     interactive: {
-      description: 'Whether the tag should visually respond to user interactions. If set to <b>true</b>, hovering over the tag will change its color and mouse cursor.<br><br>Recommended when <b>onClick</b> is also defined.',
+      description:
+        'Whether the tag should visually respond to user interactions. If set to <b>true</b>, hovering over the tag will change its color and mouse cursor.<br><br>Recommended when <b>onClick</b> is also defined.',
       table: {
         type: {
           summary: 'boolean',
         },
-        defaultValue: { summary: false }
+        defaultValue: { summary: false },
       },
-      control: 'boolean'
+      control: 'boolean',
     },
     large: {
       control: 'boolean',
@@ -85,8 +87,8 @@ export default {
           summary: 'boolean',
         },
         defaultValue: {
-          summary: false
-        }
+          summary: false,
+        },
       },
     },
     minimal: {
@@ -97,18 +99,19 @@ export default {
           summary: 'boolean',
         },
         defaultValue: {
-          summary: false
-        }
-      }
+          summary: false,
+        },
+      },
     },
     rightIcon: {
-      description: 'Name of a Blueprint UI icon to render after the text.<br><a href="https://dunkinbase.github.io/ember-elements/docs/icon/icons" >IconName</a>',
+      description:
+        'Name of a Blueprint UI icon to render after the text.<br><a href="https://dunkinbase.github.io/ember-elements/docs/icon/icons" >IconName</a>',
       control: 'text',
       table: {
         type: {
           summary: 'string',
         },
-        defaultValue: { summary: 'none' }
+        defaultValue: { summary: 'none' },
       },
     },
     round: {
@@ -117,11 +120,11 @@ export default {
       table: {
         type: {
           summary: 'boolean',
-        }
+        },
       },
       defaultValue: {
-        summary: false
-      }
+        summary: false,
+      },
     },
     removable: {
       control: 'boolean',
@@ -129,11 +132,11 @@ export default {
       table: {
         type: {
           summary: 'boolean',
-        }
+        },
       },
       defaultValue: {
-        summary: false
-      }
+        summary: false,
+      },
     },
     style: {
       description: 'Inline html style to parent element.',
@@ -142,8 +145,8 @@ export default {
           summary: 'string',
         },
         defaultValue: {
-          summary: 'none'
-        }
+          summary: 'none',
+        },
       },
       control: 'text',
     },
@@ -153,11 +156,11 @@ export default {
       table: {
         type: {
           summary: 'string',
-        }
+        },
       },
       defaultValue: {
-        summary: 'none'
-      }
+        summary: 'none',
+      },
     },
   },
 };
@@ -194,7 +197,7 @@ PrimaryTag.args = {
   rightIcon: '',
   intent: 'primary',
   value: 'Sample Tag',
-  removable: false
+  removable: false,
 };
 
 export const SuccessTag = Template.bind({});
@@ -209,7 +212,7 @@ SuccessTag.args = {
   rightIcon: '',
   intent: 'success',
   value: 'Sample Tag',
-  removable: false
+  removable: false,
 };
 
 export const WarningTag = Template.bind({});
@@ -224,7 +227,7 @@ WarningTag.args = {
   rightIcon: '',
   intent: 'warning',
   value: 'Sample Tag',
-  removable: false
+  removable: false,
 };
 
 export const DangerTag = Template.bind({});
@@ -239,7 +242,7 @@ DangerTag.args = {
   rightIcon: '',
   intent: 'danger',
   value: 'Sample Tag',
-  removable: false
+  removable: false,
 };
 
 export const LargeTag = Template.bind({});
@@ -254,7 +257,7 @@ LargeTag.args = {
   rightIcon: '',
   intent: 'primary',
   value: 'Sample Tag',
-  removable: false
+  removable: false,
 };
 
 export const MinimalTag = Template.bind({});
@@ -269,7 +272,7 @@ MinimalTag.args = {
   rightIcon: '',
   intent: 'primary',
   value: 'Sample Tag',
-  removable: false
+  removable: false,
 };
 
 export const ActiveTag = Template.bind({});
@@ -284,7 +287,7 @@ ActiveTag.args = {
   rightIcon: '',
   intent: 'primary',
   value: 'Sample Tag',
-  removable: false
+  removable: false,
 };
 
 export const InteractiveTag = Template.bind({});
@@ -299,7 +302,7 @@ InteractiveTag.args = {
   rightIcon: '',
   intent: 'primary',
   value: 'Sample Tag',
-  removable: false
+  removable: false,
 };
 
 export const RoundTag = Template.bind({});
@@ -314,7 +317,7 @@ RoundTag.args = {
   rightIcon: '',
   intent: 'primary',
   value: 'Sample Tag',
-  removable: false
+  removable: false,
 };
 
 export const TagWithIcon = Template.bind({});
@@ -329,5 +332,5 @@ TagWithIcon.args = {
   rightIcon: 'lock',
   intent: 'primary',
   value: 'Sample Tag',
-  removable: false
+  removable: false,
 };

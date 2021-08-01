@@ -10,28 +10,30 @@ export default {
           summary: 'string',
         },
         defaultValue: {
-          summary: 'none'
-        }
+          summary: 'none',
+        },
       },
       control: 'text',
     },
     icon: {
-      description: 'Name of a UI icon name to render on the left side.<br><br>If this prop is omitted or <b>undefined</b>, the <b>intent</b> prop will determine a default icon. If this prop is explicitly <b>null</b>, no icon will be displayed (regardless of <b>intent</b>).<br><a href="https://dunkinbase.github.io/ember-elements/docs/icon/icons" >IconName</a>',
+      description:
+        'Name of a UI icon name to render on the left side.<br><br>If this prop is omitted or <b>undefined</b>, the <b>intent</b> prop will determine a default icon. If this prop is explicitly <b>null</b>, no icon will be displayed (regardless of <b>intent</b>).<br><a href="https://dunkinbase.github.io/ember-elements/docs/icon/icons" >IconName</a>',
       control: 'text',
-      table: {
-        type: {
-          summary: 'string'
-        },
-        defaultValue: { summary: 'none' }
-      },
-    },
-    intent: {
-      description: 'Visual intent color to apply to background, title, and icon.<br><br>Defining this prop also applies a default icon, if the icon prop is omitted.',
       table: {
         type: {
           summary: 'string',
         },
-        defaultValue: { summary: 'none' }
+        defaultValue: { summary: 'none' },
+      },
+    },
+    intent: {
+      description:
+        'Visual intent color to apply to background, title, and icon.<br><br>Defining this prop also applies a default icon, if the icon prop is omitted.',
+      table: {
+        type: {
+          summary: 'string',
+        },
+        defaultValue: { summary: 'none' },
       },
       control: {
         type: 'select',
@@ -41,20 +43,21 @@ export default {
           warning: 'warning',
           danger: 'danger',
           none: 'none',
-        }
-      }
+        },
+      },
     },
     title: {
       control: 'text',
-      description: 'String content of optional title element.<br><br>Due to a conflict with the HTML prop types, to provide html element content simply pass <b>&lt;h4&gt;title content&lt;/h4&gt;</b> as first children element instead of using this prop.',
+      description:
+        'String content of optional title element.<br><br>Due to a conflict with the HTML prop types, to provide html element content simply pass <b>&lt;h4&gt;title content&lt;/h4&gt;</b> as first children element instead of using this prop.',
       table: {
         type: {
           summary: 'string',
-        }
+        },
       },
       defaultValue: {
-        summary: 'none'
-      }
+        summary: 'none',
+      },
     },
   },
 };
@@ -79,7 +82,7 @@ IconCallout.storyName = 'Callout with Icon';
 IconCallout.args = {
   title: 'Visually important content',
   icon: 'lock',
-  intent: 'none'
+  intent: 'none',
 };
 
 export const TitleCallout = Template.bind({});
@@ -87,7 +90,7 @@ TitleCallout.storyName = 'Callout with Title';
 TitleCallout.args = {
   title: 'Visually important content',
   icon: 'lock',
-  intent: 'none'
+  intent: 'none',
 };
 
 export const PrimaryCallout = Template.bind({});
@@ -95,7 +98,7 @@ PrimaryCallout.storyName = 'Callout with Primary intent';
 PrimaryCallout.args = {
   title: 'Primary Callout',
   icon: 'lock',
-  intent: 'primary'
+  intent: 'primary',
 };
 
 export const SuccessCallout = Template.bind({});
@@ -103,7 +106,7 @@ SuccessCallout.storyName = 'Callout with Success intent';
 SuccessCallout.args = {
   title: 'Success Callout',
   icon: 'lock',
-  intent: 'success'
+  intent: 'success',
 };
 
 export const WarningCallout = Template.bind({});
@@ -111,7 +114,7 @@ WarningCallout.storyName = 'Callout with Warning intent';
 WarningCallout.args = {
   title: 'Warning Callout',
   icon: 'lock',
-  intent: 'warning'
+  intent: 'warning',
 };
 
 export const DangerCallout = Template.bind({});
@@ -119,7 +122,5 @@ DangerCallout.storyName = 'Callout with Danger intent';
 DangerCallout.args = {
   title: 'Danger Callout',
   icon: 'lock',
-  intent: 'danger'
+  intent: 'danger',
 };
-
-
