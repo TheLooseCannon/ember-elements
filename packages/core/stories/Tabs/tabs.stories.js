@@ -4,6 +4,14 @@ import { action } from '@ember/object';
 
 export default {
   title: 'Core/Components/Tabs',
+  parameters: {
+    docs: {
+      description: {
+        component:
+          'Tabs is the top-level component responsible for rendering the tab list and coordinating selection. It can be used in controlled mode by providing **selectedTabIndex** and **onChange** props, or in uncontrolled mode by optionally providing default **SelectedTabIndex** and **onChange**.<br><br>The **Tabs** rendered in order in the tab list, which is a flex container. **Tab** sub components are managed by the main component (**Tabs**); clicking one will change selection. Arbitrary other children are simply rendered in order; interactions are your responsibility. Here we avoid manual **ID** generation of each **tab**. We know that ember component is generating unique **ID**.<br>The **panel** prop is removed from **Tab** and replaced with **yield** option for component manipulation. You are able to render **Tab** contents with help of **yield**<br>Removed **children** option from **Tab** . (children: rendered in a list above the active panel. Can also be set via the title prop.). The **yield** option is already occupied for **panel** prop. So we requesting you to use **@title** prop instead of **children**. The **title** supports **text** along with **htmlElments** in the form of string.',
+      },
+    },
+  },
   argTypes: {
     class: {
       description: 'A space-delimited list of class names to pass along to a child element.',

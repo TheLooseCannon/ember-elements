@@ -4,6 +4,14 @@ import { action } from '@ember/object';
 
 export default {
   title: 'Core/Components/Icon',
+  parameters: {
+    docs: {
+      description: {
+        component:
+          'The ***Icon*** addon which populate <a href="https://dunkinbase.github.io/ember-elements/docs/icon/icons" >Blueprintjs</a> Icons based on icon name.',
+      },
+    },
+  },
   argTypes: {
     class: {
       description: 'A space-delimited list of class names to pass along to a child element.',

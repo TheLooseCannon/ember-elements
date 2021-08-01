@@ -4,6 +4,14 @@ import { action } from '@ember/object';
 
 export default {
   title: 'Core/Components/Tag',
+  parameters: {
+    docs: {
+      description: {
+        component: 'Tags are great for lists of strings.',
+      },
+    },
+  },
+  description: 'Storybook helps you build UI components in isolation from your app',
   argTypes: {
     active: {
       table: {

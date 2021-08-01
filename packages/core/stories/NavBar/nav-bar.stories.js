@@ -4,6 +4,13 @@ import { action } from '@ember/object';
 
 export default {
   title: 'Core/Components/Navigation Bar',
+  parameters: {
+    docs: {
+      description: {
+        component: 'Navbars present useful navigation controls at the top of an application.',
+      },
+    },
+  },
   argTypes: {
     class: {
       description: 'A space-delimited list of class names to pass along to a child element.',

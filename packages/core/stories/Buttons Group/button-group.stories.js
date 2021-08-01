@@ -3,6 +3,14 @@ import { hbs } from 'ember-cli-htmlbars';
 
 export default {
   title: 'Core/Components/Button Group',
+  parameters: {
+    docs: {
+      description: {
+        component:
+          'Button group is grouping of two or more ***Button***. Button groups arrange multiple buttons in a horizontal or vertical group. Provided some of the blueprintjs button group features as follows.',
+      },
+    },
+  },
   argTypes: {
     alignText: {
       description:

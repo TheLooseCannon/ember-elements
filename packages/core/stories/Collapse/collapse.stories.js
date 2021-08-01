@@ -4,6 +4,14 @@ import { action } from '@ember/object';
 
 export default {
   title: 'Core/Components/Collapse',
+  parameters: {
+    docs: {
+      description: {
+        component:
+          'The ***Collapse*** element shows and hides content with a built-in slide in/out animation. You might use this to create a panel of settings for your application, with sub-sections that can be expanded and collapsed.',
+      },
+    },
+  },
   argTypes: {
     class: {
       description: 'A space-delimited list of class names to pass along to a child element.',

@@ -2,6 +2,14 @@ import { hbs } from 'ember-cli-htmlbars';
 
 export default {
   title: 'Core/Components/Callout',
+  parameters: {
+    docs: {
+      description: {
+        component:
+          'Callouts visually highlight important content for the user. They can contain a title, an icon and content. Each intent has a default icon associated with it.',
+      },
+    },
+  },
   argTypes: {
     class: {
       description: 'A space-delimited list of class names to pass along to a child element.',

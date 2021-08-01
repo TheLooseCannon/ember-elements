@@ -3,6 +3,13 @@ import { hbs } from 'ember-cli-htmlbars';
 
 export default {
   title: 'Core/Components/Card',
+  parameters: {
+    docs: {
+      description: {
+        component: 'A card is a bounded unit of UI content with a solid background color.',
+      },
+    },
+  },
   argTypes: {
     class: {
       description: 'A space-delimited list of class names to pass along to a child element.',

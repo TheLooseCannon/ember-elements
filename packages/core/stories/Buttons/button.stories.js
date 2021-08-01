@@ -3,6 +3,14 @@ import { hbs } from 'ember-cli-htmlbars';
 
 export default {
   title: 'Core/Components/Button',
+  parameters: {
+    docs: {
+      description: {
+        component:
+          "The ***Button*** component is used to trigger actions when user clicked.<br><br><h3>Props</h3> The two button components each support arbitrary HTML props for their underlying DOM element (<b>&lt;button&gt;</b> and <b>&lt;a&gt;</b> respectively). Specifying an HTML prop will override the component's default for it, such as <b>role</b> on <b>&lt;AnchorButton&gt;</b>.",
+      },
+    },
+  },
   argTypes: {
     label: {
       description: 'Text to be shown inside the button',

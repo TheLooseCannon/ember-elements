@@ -4,6 +4,14 @@ import { action } from '@ember/object';
 
 export default {
   title: 'Core/Components/Progress Bar',
+  parameters: {
+    docs: {
+      description: {
+        component:
+          'Progress bars indicate progress towards the completion of a task or an indeterminate loading state.<br><br><h3>Props</h3>**ProgressBar** is a simple stateless component that renders the appropriate HTML markup. It supports a **value** prop between 0 and 1 that determines the width of the progress meter. Omitting **value** will result in an "indeterminate" progress meter that fills the entire bar.',
+      },
+    },
+  },
   argTypes: {
     animate: {
       description: 'Whether the background should animate.',
