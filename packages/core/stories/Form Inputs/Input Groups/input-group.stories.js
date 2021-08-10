@@ -220,10 +220,10 @@ const Template = (args) => ({
   @large={{isLarge}}
   @small={{isSmall}}
   @intent={{intent}} >
-  <ToolTip @content={{content}} @disabled={{isDisabled}} >
+  <Tooltip @content={{"what is this?"}} @disabled={{isDisabled}} >
     <Button @icon={{icon}} @disabled={{isDisabled}}
-    @intent="warning" @minimal="true" @onClick={{action "OnClick"}}></Button>
-  </ToolTip>
+    @intent={{'success'}} @minimal=true @onClick={{this.OnClick}} />
+  </Tooltip>
 </InputGroup>
 <InputGroup
   @leftIcon='tag'
@@ -232,7 +232,7 @@ const Template = (args) => ({
   @large={{isLarge}}
   @small={{isSmall}}
   @intent={{intent}}
-  @onkeyDown={{action 'onkeyDown'}}>
+  @onkeyDown={{this.onkeyDown}}>
   <Tag @minimal=true @value={{tagValueChange}}></Tag>
 </InputGroup>
 <InputGroup
@@ -246,7 +246,7 @@ const Template = (args) => ({
    @selected={{selected}}
    @minimal={{false}}
    @ButtonProps={{ButtonProps}}
-   @onSelect={{action 'optionSelected' }}>
+   @onSelect={{this.optionSelected}}>
   </Select>
   </InputGroup>`,
   context: args,

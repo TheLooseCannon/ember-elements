@@ -213,7 +213,7 @@ export default {
 };
 
 const Template = (args) => ({
-  template: hbs`<Button @onClick={{action "onDialogToggle"}}>
+  template: hbs`<Button @onClick={{this.onDialogToggle}}>
   Show dialog
 </Button>
 <Dialog
@@ -223,7 +223,7 @@ const Template = (args) => ({
   @usePortal={{usePortal}}
   @canEscapeKeyClose={{canEscapeKeyClose}}
   @canOutsideClickClose={{canOutsideClickClose}}
-  @onClose={{action "onClose"}}
+  @onClose={{this.onClose}}
   @icon="info-sign"
   @title="Palantir Foundry"
 >
@@ -258,16 +258,13 @@ const Template = (args) => ({
   </div>
   <div class="bp3-dialog-footer">
     <div class="bp3-dialog-footer-actions">
-      <ToolTip
+      <Tooltip
         @content="This button is hooked up to close the dialog."
       >
-        <Button @onClick={{action "onClose"}}>
+        <Button @onClick={{this.Close}}>
           Close
         </Button>
-      </ToolTip>
-      <AnchorButton @intent="primary">
-        Visit the Foundry website
-      </AnchorButton>
+      </Tooltip>
     </div>
   </div>
 </Dialog>`,

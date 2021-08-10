@@ -14,10 +14,36 @@ export default {
   argTypes: {
     alignIndicator: {
       description: 'Alignment of the indicator within container. The options are **left**, **center**, **right**.',
-      control: 'text',
+      control: {
+        type: 'select',
+        options: {
+          left: 'left',
+          right: 'right',
+          center: 'center',
+        },
+      },
       table: {
         type: {
           summary: 'string',
+        },
+      },
+    },
+    intent: {
+      description: 'Visual intent color to apply to element. Options are <b>primary,success,warning,danger,none</b>.',
+      table: {
+        type: {
+          summary: 'string',
+        },
+        defaultValue: { summary: 'none' },
+      },
+      control: {
+        type: 'select',
+        options: {
+          primary: 'primary',
+          success: 'success',
+          warning: 'warning',
+          danger: 'danger',
+          none: 'none',
         },
       },
     },
@@ -126,32 +152,35 @@ const Template = (args) => ({
   template: hbs`<RadioGroup
   @label="Determine lunch"
   @name="group"
-  @inline={{inline}}
-  @selectedValue={{value}}
-  @disabled={{disabled}}
-  @onChange={{action "handleRadioChange"}} as |R|
+  @inline={{this.inline}}
+  @selectedValue={{this.value}}
+  @onChange={{this.handleRadioChange}}
 >
-  <R.Radio
+  <Radio
     @value="one"
-    @large={{large}}
-    @alignIndicator={{alignIndicator}}
+    @large={{this.large}}
+    @disabled={{this.disabled}}
+  @inline={{this.inline}}
+    @alignIndicator={{this.alignIndicator}}
   >
   Soup
-   </R.Radio>
-  <R.Radio
+   </Radio>
+  <Radio
     @value="two"
-    @large={{large}}
-    @alignIndicator={{alignIndicator}}
+    @large={{this.large}}
+    @disabled={{this.disabled}}
+    @alignIndicator={{this.alignIndicator}}
    >
    Salad
-   </R.Radio>
-  <R.Radio
+   </Radio>
+  <Radio
     @value="three"
-    @large={{large}}
-    @alignIndicator={{alignIndicator}}
+    @large={{this.large}}
+    @disabled={{this.disabled}}
+    @alignIndicator={{this.alignIndicator}}
    >
    Sandwich
-   </R.Radio>
+   </Radio>
 </RadioGroup>`,
   context: args,
 });
@@ -165,5 +194,42 @@ Radio.args = {
   inline: false,
   label: 'Text label for the control.',
   large: false,
+  value: 'string',
+};
+
+
+export const LargeRadio = Template.bind({});
+LargeRadio.args = {
+  alignIndicator: 'left',
+  checked: false,
+  defaultChecked: false,
+  disabled: false,
+  inline: false,
+  label: 'Text label for the control.',
+  large: true,
+  value: 'string',
+};
+
+export const RightAlignedRadio = Template.bind({});
+RightAlignedRadio.args = {
+  alignIndicator: 'right',
+  checked: false,
+  defaultChecked: false,
+  disabled: false,
+  inline: false,
+  label: 'Text label for the control.',
+  large: true,
+  value: 'string',
+};
+
+export const DisabledRadio = Template.bind({});
+DisabledRadio.args = {
+  alignIndicator: 'left',
+  checked: false,
+  defaultChecked: false,
+  disabled: true,
+  inline: false,
+  label: 'Text label for the control.',
+  large: true,
   value: 'string',
 };

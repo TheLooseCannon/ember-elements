@@ -41,7 +41,7 @@ export default {
       control: 'boolean',
     },
     iconProps: {
-      description: 'rops to spread to the **<Icon>** element.',
+      description: 'rops to spread to the **&lt;icon&gt;** element.',
       table: {
         type: {
           summary: 'object',
@@ -85,7 +85,6 @@ export default {
       },
       description:
         'Change event handler. Use **event.target.value** to access the new value.',
-      control: 'boolean',
     },
     options: {
       table: {
@@ -106,11 +105,20 @@ const Template = (args) => ({
   @fill={{fill}}
   @large={{large}}
   @minimal={{minimal}}
-  @onChange={{action 'onChange'}}
+  @onChange={{this.onChange}}
  >
 </HtmlSelect>`,
   context: args,
 });
+
+
+const OPTIONS = [
+  { value: 'chooseAnItem', label: 'Choose An Item....' },
+  { value: 'one', label: 'One' },
+  { value: 'two', label: 'Two' },
+  { value: 'three', label: 'Three' },
+  { value: 'four', label: 'Four' }
+];
 
 export const HTMLSelect = Template.bind({});
 HTMLSelect.args = {
@@ -118,4 +126,5 @@ HTMLSelect.args = {
   fill: false,
   large: false,
   minimal: false,
+  OPTIONS: OPTIONS
 };

@@ -121,26 +121,18 @@ export default {
 };
 
 const Template = (args) => ({
-  template: hbs`<NavBar>
-    <NavBar::Group
-      @align={{this.align}}
-    >
-        <NavBar::Heading> ember-elements </NavBar::Heading>
-        <NavBar::Divider />
-        <Button
-            @class="bp3-minimal"
-            @icon="home"
-        >
-            Home
-        </Button>
-        <Button
-            @class="bp3-minimal"
-            @icon="document"
-        >
-            Document
-        </Button>
-    </NavBar::Group>
-</NavBar>`,
+  template: hbs`<Navbar>
+  <NavbarGroup @align={{this.align}}>
+    <NavbarHeading> ember-elements </NavbarHeading>
+    <NavbarDivider />
+    <Button @class="bp3-minimal" @icon="home">
+      Home
+    </Button>
+    <Button @class="bp3-minimal" @icon="document">
+      Document
+    </Button>
+  </NavbarGroup>
+</Navbar>`,
   context: args,
 });
 

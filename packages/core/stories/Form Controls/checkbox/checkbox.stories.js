@@ -130,34 +130,18 @@ export default {
 };
 
 const Template = (args) => ({
-  template: hbs`<div>
-<label class="bp3-label">Assign responsibility</label>
-<CheckBox
-  @disabled={{disabled}}
-  @inline={{inline}}
-  @large={{large}}
-  @alignIndicator={{alignIndicator}}
-  @defaultIndeterminate={{true}}
+  template: hbs`
+<Checkbox
+  @disabled={{this.disabled}}
+  @inline={{this.inline}}
+  @large={{this.large}}
+  @alignIndicator={{this.alignIndicator}}
+  @defaultIndeterminate={{this.defaultIndeterminate}}
+  @indeterminate={{this.indeterminate}}
+  checked={{this.checked}}
  >
- Gilad Gray
- </CheckBox>
-<CheckBox
-  @disabled={{disabled}}
-  @inline={{inline}}
-  @large={{large}}
-  @alignIndicator={{alignIndicator}}
-  >
- Jason Killian
- </CheckBox>
-<CheckBox
-  @disabled={{disabled}}
-  @inline={{inline}}
-  @large={{large}}
-  @alignIndicator={{alignIndicator}}
- >
- Antoine Llorca
- </CheckBox>
- </div>`,
+ Sample Checkbox Label
+ </Checkbox>`,
   context: args,
 });
 
@@ -179,7 +163,7 @@ IndeterminateCheckbox.args = {
   alignIndicator: 'left',
   checked: false,
   defaultChecked: false,
-  defaultIndeterminate: false,
+  defaultIndeterminate: true,
   disabled: false,
   indeterminate: true,
   inline: false,
@@ -198,4 +182,30 @@ LargeCheckbox.args = {
   inline: false,
   label: 'Text label for the control.',
   large: true
+};
+
+export const DisabledCheckbox = Template.bind({});
+DisabledCheckbox.args = {
+  alignIndicator: 'left',
+  checked: false,
+  defaultChecked: false,
+  defaultIndeterminate: false,
+  disabled: true,
+  indeterminate: false,
+  inline: false,
+  label: 'Text label for the control.',
+  large: false
+};
+
+export const RightAlignedCheckbox = Template.bind({});
+RightAlignedCheckbox.args = {
+  alignIndicator: 'right',
+  checked: false,
+  defaultChecked: false,
+  defaultIndeterminate: false,
+  disabled: false,
+  indeterminate: false,
+  inline: false,
+  label: 'Text label for the control.',
+  large: false
 };

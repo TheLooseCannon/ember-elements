@@ -121,7 +121,7 @@ export default {
         },
       },
     },
-    open: {
+    isOpen: {
       description: 'External function to close popover',
       control: 'boolean',
       table: {
@@ -162,7 +162,7 @@ export default {
 };
 
 const Template = (args) => ({
-  template: hbs`<PopOver @btnTitle='Open popover' @open={{open}}
+  template: hbs`<Popover @btnTitle='Open popover' @isOpen={{this.isOpen}}
  @intent="primary" @icon='code'
  @isOutClickClose={{canOutsideClickClose}} @placement={{placement}}
  @arrow={{arrow}} @canEscapeKeyClose={{canEscapeKeyClose}}>
@@ -170,11 +170,11 @@ const Template = (args) => ({
     <h5 class="bp3-heading">Confirm deletion</h5>
     <p>Are you sure you want to delete these items? You won't be able to recover them.</p>
     <div style="display: flex; justify-content: flex-end; margin-top: 15px;">
-      <Button  onClick={{action 'onClose'}} @style="margin-right: 10px;">Cancel</Button>
-      <Button  onClick={{action 'onClose'}} @intent="danger">Delete</Button>
+      <Button  onClick={{this.onClose}} @style="margin-right: 10px;">Cancel</Button>
+      <Button  onClick={{this.onClose}} @intent="danger">Delete</Button>
     </div>
    </div>
-</PopOver>`,
+</Popover>`,
   context: args,
 });
 

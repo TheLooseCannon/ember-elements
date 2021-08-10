@@ -45,18 +45,19 @@ export default {
 };
 
 const Template = (args) => ({
-  template: hbs`<ControlGroup @style={{style}} @fill={{fill}} @vertical={{vertical}}>
+  template: hbs`<ControlGroup @style={{this.style}} @fill={{this.fill}} @vertical={{this.vertical}}>
   <Button @intent="primary">
     Hii
   </Button>
   <InputGroup @placeholder="Find filters..." ></InputGroup>
   <Button @icon="arrow-right" ></Button>
-</ControlGroup>`,
+</ControlGroup>
+{{this.vertical}}`,
   context: args,
 });
 
 export const ControlGroup = Template.bind({});
 ControlGroup.args = {
-  fill: false,
+  fill: true,
   vertical: false
 };

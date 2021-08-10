@@ -194,19 +194,19 @@ export default {
 };
 
 const Template = (args) => ({
-  template: hbs`<Button @onClick={{action 'openDrawerComponent'}} @primary=true
+  template: hbs`<Button @onClick={{this.openDrawerComponent}} @primary=true
 >Show Drawer</Button>
-<DbDrawer @isOpen={{isOpenDrawer}} @size={{size}}
+<Drawer @isOpen={{isOpen}} @size={{size}}
 @vertical={{vertical}} @autoFocus={{autoFocus}} @enforceFocus={{enforceFocus}}
 @hasBackdrop={{hasBackdrop}} @usePortal={{usePortal}}
 @canOutsideClickClose={{canOutsideClickClose}}
 @canEscapeKeyClose={{canEscapeKeyClose}} @isLeft={{isLeft}}>
-{{#db-drawer/header}}
+<Drawer::Header>
   <Icon @icon="info-sign"></Icon>
     <h4 class="bp3-heading">Palantir Foundry</h4>
     <Button @icon='small-cross' @minimal=true></Button>
-{{/db-drawer/header}}
-{{#db-drawer/body}}
+</Drawer::Header>
+<Drawer::Body>
     <p><strong>Data integration is the seminal problem of the digital age. For over ten years, we’ve
        helped the world’s premier organizations rise to the challenge.</strong></p>
     <p>Palantir Foundry radically reimagines the way enterprises interact with data by amplifying and
@@ -225,11 +225,11 @@ const Template = (args) => ({
        enterprise data foundation goes where the business drives it.
     </p>
     <p>Start the revolution. Unleash the power of data integration with Palantir Foundry.</p>
- {{/db-drawer/body}}
- {{#db-drawer/footer}}
+ </Drawer::Body>
+ <Drawer::Footer>
    Footer
- {{/db-drawer/footer}}
-</DbDrawer>`,
+ </Drawer::Footer>
+</Drawer>`,
   context: args,
 });
 

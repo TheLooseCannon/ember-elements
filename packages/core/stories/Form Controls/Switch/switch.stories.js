@@ -14,7 +14,14 @@ export default {
   argTypes: {
     alignIndicator: {
       description: 'Alignment of the indicator within container. The options are **left**, **center**, **right**.',
-      control: 'text',
+      control: {
+        type: 'select',
+        options: {
+          left: 'left',
+          right: 'right',
+          center: 'center',
+        },
+      },
       table: {
         type: {
           summary: 'string',
@@ -123,29 +130,16 @@ export default {
 };
 
 const Template = (args) => ({
-  template: hbs`<Switch
-  @disabled={{disabled}}
-  @inline={{inline}}
-  @large={{large}}
-  @alignIndicator={{alignIndicator}}
-  @labelElement="<strong>Enabled</strong>"
- ></Switch>
+  template: hbs`
 <Switch
-  @disabled={{disabled}}
+  @disabled={{this.disabled}}
   @inline={{inline}}
   @large={{large}}
-  @alignIndicator={{alignIndicator}}
+  @alignIndicator={{this.alignIndicator}}
   @labelElement="<u>Cooperative</u>"
-  @defaultChecked="true"
- ></Switch>
-<Switch
-  @disabled={{disabled}}
-  @inline={{inline}}
-  @large={{large}}
-  @alignIndicator={{alignIndicator}}
-  @labelElement="Containing Text"
-  @innerLabelChecked="on"
-  @innerLabel="off"
+  @defaultChecked={{this.defaultChecked}}
+  @innerLabel={{this.innerLabel}}
+  @innerLabelChecked={{this.innerLabelChecked}}
  ></Switch>`,
   context: args,
 });
@@ -157,8 +151,52 @@ Switch.args = {
   defaultChecked: false,
   disabled: false,
   inline: false,
-  innerLabel: 'Text to display inside the switch indicator when unchecked.',
-  innerLabelChecked: 'innerLabel Checked',
   label: 'Text label for the control.',
   large: false
+};
+
+export const InnerLabelSwitch = Template.bind({});
+InnerLabelSwitch.args = {
+  alignIndicator: 'left',
+  checked: false,
+  defaultChecked: false,
+  disabled: false,
+  inline: false,
+  innerLabel: 'Off',
+  innerLabelChecked: 'On',
+  label: 'Text label for the control.',
+  large: false
+};
+
+export const DisabledSwitch = Template.bind({});
+DisabledSwitch.args = {
+  alignIndicator: 'left',
+  checked: false,
+  defaultChecked: false,
+  disabled: true,
+  inline: false,
+  label: 'Text label for the control.',
+  large: false
+};
+
+export const LargeSwitch = Template.bind({});
+LargeSwitch.args = {
+  alignIndicator: 'left',
+  checked: false,
+  defaultChecked: true,
+  disabled: false,
+  inline: false,
+  label: 'Text label for the control.',
+  large: true
+};
+
+export const RighAlignSwitch = Template.bind({});
+RighAlignSwitch.args = {
+  alignIndicator: 'right',
+  checked: false,
+  defaultChecked: true,
+  disabled: false,
+  inline: false,
+  label: 'Text label for the control.',
+  large: true
 };

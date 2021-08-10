@@ -69,6 +69,25 @@ export default {
         },
       },
     },
+    placement: {
+      description: 'Direction in which the tooltip is to be opened',
+      table: {
+        type: {
+          summary: 'string',
+        },
+        defaultValue: { summary: 'none' },
+      },
+      control: {
+        type: 'select',
+        options: {
+          left: 'left',
+          right: 'right',
+          top: 'top',
+          bottom: 'bottom',
+          none: 'none',
+        },
+      },
+    },
     isOpen: {
       description:
         'Whether the popover is visible. Passing this prop puts the popover in controlled mode, where the only way to change visibility is by updating this property. If **disabled={true}**, this prop will be ignored, and the popover will remain closed.',
@@ -108,55 +127,11 @@ export default {
 };
 
 const Template = (args) => ({
-  template: hbs`<div>Inline text can have
-    <ToolTip @content={{Content}} class='bp3-tooltip-indicator'>
+  template: hbs`<div>
+  Inline text can have {{this.placement}}
+    <Tooltip @content={{Content}} class='bp3-tooltip-indicator' @intent={{this.intent}} @placement='right'>
         this is tool tip
-    </ToolTip>
-    &nbsp;
-</div>
-<div>
-    Or,
-    <ToolTip @content={{lotsOfText}}>
-        hover anywhere over this whole line.
-    </ToolTip>
-</div>
-<div>This line's tooltip
-    <ToolTip @disabled=true class='bp3-tooltip-indicator'>
-        is disabled.
-    </ToolTip>
-</div>
-<div>
-    This line's tooltip
-    <ToolTip @isOpen={{isOpen}} class='bp3-tooltip-indicator'>
-        is controlled by external state.
-    </ToolTip>
-    <label class="bp3-control bp3-switch" {{action 'onisOpen'}}
-        style=" display: inline-block; margin-bottom: 0px; margin-left: 20px;">
-        {{#if isOpen}}
-        <input type="checkbox" checked>
-        {{else}}
-        <input type="checkbox">
-        {{/if}}
-        <span class="bp3-control-indicator"></span>
-        Open.
-    </label>
-</div>
-<div>
-    <ToolTip @content={{Content}} @placement='left' class='bp3-tooltip-indicator' @intent='primary'>
-        Available
-    </ToolTip>
-    &nbsp;
-    <ToolTip @content={{Content}} @placement='top' class='bp3-tooltip-indicator' @intent='success'>
-        in the full
-    </ToolTip>
-    &nbsp;
-    <ToolTip @content={{Content}} @placement='bottom' class='bp3-tooltip-indicator' @intent='warning'>
-        range of
-    </ToolTip>
-    &nbsp;
-    <ToolTip @content={{Content}} @placement='right' class='bp3-tooltip-indicator' @intent='danger'>
-        visual intents!
-    </ToolTip>
+    </Tooltip>
 </div>`,
   context: args,
 });
@@ -169,4 +144,85 @@ Tooltip.args = {
   intent: 'none',
   isOpen: false,
   targetClassName: 'none',
+  placement: 'none'
 };
+
+export const LeftTooltip = Template.bind({});
+LeftTooltip.args = {
+  content: 'none',
+  defaultIsOpen: false,
+  disabled: false,
+  intent: 'none',
+  isOpen: false,
+  targetClassName: 'none',
+  placement: 'left'
+};
+export const RightTooltip = Template.bind({});
+RightTooltip.args = {
+  content: 'none',
+  defaultIsOpen: false,
+  disabled: false,
+  intent: 'none',
+  isOpen: false,
+  targetClassName: 'none',
+  placement: 'right'
+};
+export const TopTooltip = Template.bind({});
+TopTooltip.args = {
+  content: 'none',
+  defaultIsOpen: false,
+  disabled: false,
+  intent: 'none',
+  isOpen: false,
+  targetClassName: 'none',
+  placement: 'top'
+};
+export const BottomTooltip = Template.bind({});
+BottomTooltip.args = {
+  content: 'none',
+  defaultIsOpen: false,
+  disabled: false,
+  intent: 'none',
+  isOpen: false,
+  targetClassName: 'none',
+  placement: 'bottom'
+};
+export const PrimaryTooltip = Template.bind({});
+PrimaryTooltip.args = {
+  content: 'none',
+  defaultIsOpen: false,
+  disabled: false,
+  intent: 'primary',
+  isOpen: false,
+  targetClassName: 'none',
+};
+export const SuccessTooltip = Template.bind({});
+SuccessTooltip.args = {
+  content: 'none',
+  defaultIsOpen: false,
+  disabled: false,
+  intent: 'success',
+  isOpen: false,
+  targetClassName: 'none',
+};
+
+export const WarningTooltip = Template.bind({});
+WarningTooltip.args = {
+  content: 'none',
+  defaultIsOpen: false,
+  disabled: false,
+  intent: 'warning',
+  isOpen: false,
+  targetClassName: 'none',
+};
+
+
+export const DangerTooltip = Template.bind({});
+DangerTooltip.args = {
+  content: 'none',
+  defaultIsOpen: false,
+  disabled: false,
+  intent: 'danger',
+  isOpen: false,
+  targetClassName: 'none',
+};;;

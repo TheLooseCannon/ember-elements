@@ -70,7 +70,7 @@ const Template = (args) => ({
   </Button>
   {{this.isOpen}}
   <Collapse
-      @isOpen={{this.isOpen}}
+      @isOpen={{true}}
       @keepChildrenMounted={{this.keepChildrenMounted}}
       @transitionDuration={{this.transitionDuration}}
     >
@@ -87,5 +87,6 @@ const Template = (args) => ({
 
 export const InteractiveCollapse = Template.bind({});
 InteractiveCollapse.args = {
+  isOpen: false,
   onClickButton: (args) => action(console.log('args : ', args.isOpen))(),
 };
